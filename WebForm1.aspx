@@ -29,7 +29,8 @@
     <hr>
     <p>Criando uma conta você concorda com nossos<a href="#">Termos & Privacidade</a>.</p>
 
-    <button type="submit" class="registerbtn">Cadastrar</button>
+        <asp:Button ID="btnEnviar" runat="server" Text="Button" OnClick="btnEnviar_Click()" />
+
   </div>
 
     <asp:Label ID="lblMensagem" Text="Resposta" runat="server"></asp:Label>
