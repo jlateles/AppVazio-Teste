@@ -7,6 +7,7 @@
   
     <div class="container">
     <h1>Cadastra-se</h1>
+        <p>Cadastrar</p>
     
     <hr>
 
