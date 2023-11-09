@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Data.Common;
 using System.Diagnostics.Eventing.Reader;
+using System.EnterpriseServices;
 
 namespace AppVazio.View
 {
@@ -36,7 +37,8 @@ namespace AppVazio.View
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
 
-            if (txbSenha.Text != txbsenhaRepete.Text);
+
+            if (txbSenha.Text != txbsenhaRepete.Text)
             {
                 lblMensagem.Text = "As senhas não conferem! Tente outra vez!";
                 lblMensagem.BackColor = System.Drawing.Color.Red;
@@ -53,10 +55,15 @@ namespace AppVazio.View
                 ExibirDados();
             }
 
-            
+
         }
 
-        public void ExibirDados()
+
+
+
+    }
+
+    public void ExibirDados()
         {
             dataSet = new DataSet();
             comandos.CommandText = "SELECT * FROM alunos WHERE email= ' " + txbEmail.Text + " '";
